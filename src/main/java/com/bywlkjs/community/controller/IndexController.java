@@ -6,15 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.jws.WebParam;
+
 @Controller
-public class HelloController {
+public class IndexController {
 
     @GetMapping("/")
     public String greeting(){ return "index"; }
 
-    @GetMapping("/callback")
-    public String callback(@RequestParam("code") String code){
-        System.out.println("callback下获取的code"+code);
-        return null;
-    }
 }
